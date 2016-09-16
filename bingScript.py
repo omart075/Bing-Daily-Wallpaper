@@ -21,6 +21,7 @@ def getURL():
     xmlPath = "/Users/omart/Desktop/Python_Programs/bingScript/bing.xml"
     parseFile = ET.parse(xmlPath)
     url = parseFile.getroot()
+    global fullURL
     fullURL = "http://bing.com" + url[0][3].text
     global notification
     notification = (url[0][5].text)
@@ -77,6 +78,44 @@ def writeToImage():
     draw = ImageDraw.Draw(img)
     img.save("/Users/omart/Desktop/Python_Programs/bingScript/bing.jpg")
 
+#save image of the day to a website
+def website(picHtml, picInfo):
+    #html needed to add a new picture to the website
+    htmlStr = """
+      <div class="img">
+        <a target="_blank" href=" """ + picHtml + """ ">
+          <img src=" """ + picHtml + """ " alt="img" width="300" height="200">
+        </a>
+        <div class="desc"> """ + picInfo + """</div>
+      </div>
+    """
+
+    #reads txt file to write new image to html
+    f = open("/Users/omart/Desktop/Python_Programs/bingScript/bingCode.txt", "r")
+    htmlFile = open("/Users/omart/Desktop/Python_Programs/bingScript/omart075.github.io/index.html", "w")
+    for line in f:
+        if "<body>" in line:
+            htmlFile.write(line)
+            htmlFile.write(htmlStr)
+        else:
+            htmlFile.write(line)
+    f.close()
+    htmlFile.close()
+
+    #reads html to write updated html to txt file so it is not lost
+    f = open("/Users/omart/Desktop/Python_Programs/bingScript/bingCode.txt", "w")
+    htmlFile = open("/Users/omart/Desktop/Python_Programs/bingScript/omart075.github.io/index.html", "r")
+    for line in htmlFile:
+        f.write(line)
+    f.close()
+    htmlFile.close()
+
+    #UNIX commands to push changes onto github and update website
+    os.chdir("/Users/omart/Desktop/Python_Programs/bingScript/omart075.github.io")
+    call(["git", "add", "--a"])
+    call(["git", "commit", "-m", "\"Commit\""])
+    call(["git", "push", "-u", "origin", "master"])
+
 
 #checks if there is a connection to wifi in order to process code
 connected = False
@@ -88,6 +127,7 @@ while connected == False:
         getImage(getURL())
         writeToImage()
         setWallpaper()
+        website(fullURL, word(notification))
         connected = True
     except:
         pass
