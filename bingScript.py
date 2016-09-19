@@ -78,6 +78,13 @@ def writeToImage():
     draw = ImageDraw.Draw(img)
     img.save("/Users/omart/Desktop/Python_Programs/bingScript/bing.jpg")
 
+#opens a file and prints date and picture information
+def writeFile():
+    f = open('/Users/omart/Desktop/Python_Programs/bingScript/pictures.txt', 'a')
+    f.write(date() + word(notification))
+    f.write("\n")
+    f.close()
+
 #save image of the day to a website
 def website(picHtml, picInfo):
     #html needed to add a new picture to the website
@@ -141,9 +148,3 @@ notify(title = 'Bing Image Description',
 subtitle = '',
 message = word(notification))
 '''
-#opens a file and prints date and picture information
-f = open('/Users/omart/Desktop/Python_Programs/bingScript/pictures.txt', 'a')
-f.write(date() + word(notification))
-f.write("\n")
-f.close()
-#call(["killall", "Terminal"])

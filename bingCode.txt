@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+div.img:hover {
+    border: 1px solid #777;
+}
+div.img img {
+    width: 100%;
+    height: auto;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+      <div class="img">
+        <a target="_blank" href=" http://bing.com/az/hprichbg/rb/TalkLikeAPirate_EN-US8324063595_1366x768.jpg ">
+          <img src=" http://bing.com/az/hprichbg/rb/TalkLikeAPirate_EN-US8324063595_1366x768.jpg " alt="img" width="300" height="200">
+        </a>
+        <div class="desc"> Red-lored amazons in Ecuador </div>
+      </div>
+    
+      <div class="img">
+        <a target="_blank" href=" http://bing.com/az/hprichbg/rb/CuyahogaValleyNP_EN-US10965281628_1366x768.jpg ">
+          <img src=" http://bing.com/az/hprichbg/rb/CuyahogaValleyNP_EN-US10965281628_1366x768.jpg " alt="img" width="300" height="200">
+        </a>
+        <div class="desc"> Blue Hen Falls, Cuyahoga Valley National Park, Ohio </div>
+      </div>
+    
+      <div class="img">
+        <a target="_blank" href=" http://bing.com/az/hprichbg/rb/OktoberfestRide_EN-US12119176463_1366x768.jpg ">
+          <img src=" http://bing.com/az/hprichbg/rb/OktoberfestRide_EN-US12119176463_1366x768.jpg " alt="img" width="300" height="200">
+        </a>
+        <div class="desc"> Amusement ride at Oktoberfest in Munich, Germany </div>
+      </div>
+    
+      <div class="img">
+        <a target="_blank" href=" http://bing.com/az/hprichbg/rb/WebbChapelParkPavilion_EN-US11684993453_1366x768.jpg ">
+          <img src=" http://bing.com/az/hprichbg/rb/WebbChapelParkPavilion_EN-US11684993453_1366x768.jpg " alt="img" width="300" height="200">
+        </a>
+        <div class="desc"> Interior ceiling view of Webb Chapel Park Pavilion, Dallas, Texas </div>
+      </div>
+    
+      <div class="img">
+        <a target="_blank" href=" http://bing.com/az/hprichbg/rb/SofiaBulgaria_EN-US11941959670_1366x768.jpg ">
+          <img src=" http://bing.com/az/hprichbg/rb/SofiaBulgaria_EN-US11941959670_1366x768.jpg " alt="img" width="300" height="200">
+        </a>
+        <div class="desc"> Fog over Sofia, Bulgaria </div>
+      </div>
+    </body>
+</html>
