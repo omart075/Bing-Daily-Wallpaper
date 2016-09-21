@@ -139,6 +139,10 @@ while connected == False:
     except:
         pass
 
+
+def lester():
+    print "lester is a fucking boss"
+    
 #opens terminal in order to create notification and then makes notification
 #terminalPath = "/Applications/Utilities/Terminal.app"
 #os.system("open " + terminalPath)
