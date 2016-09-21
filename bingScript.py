@@ -139,10 +139,15 @@ while connected == False:
     except:
         pass
 
+<<<<<<< HEAD
 
 def lester():
     print "lester is a fucking boss"
     
+=======
+print "haaaan"
+
+>>>>>>> 5e6042d516a89da820dae5219d09df50a39a2cfc
 #opens terminal in order to create notification and then makes notification
 #terminalPath = "/Applications/Utilities/Terminal.app"
 #os.system("open " + terminalPath)
